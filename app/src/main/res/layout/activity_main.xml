@@ -76,14 +76,14 @@
         android:visibility="gone"
         android:elevation="4dp"
         app:indeterminateTint="@color/secondary"
-        app:layout_constraintBottom_toBottomOf="@id/btn_register"
-        app:layout_constraintEnd_toEndOf="@id/btn_register"
-        app:layout_constraintStart_toStartOf="@id/btn_register"
-        app:layout_constraintTop_toTopOf="@id/btn_register" />
+        app:layout_constraintBottom_toBottomOf="@id/btn_login"
+        app:layout_constraintEnd_toEndOf="@id/btn_login"
+        app:layout_constraintStart_toStartOf="@id/btn_login"
+        app:layout_constraintTop_toTopOf="@id/btn_login" />
 
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_register"
+        android:id="@+id/btn_login"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginTop="32dp"
@@ -104,7 +104,7 @@
         android:text="SOCIAL AUTH"
         android:textColor="#475569"
         android:textSize="10sp"
-        app:layout_constraintTop_toBottomOf="@id/btn_register"
+        app:layout_constraintTop_toBottomOf="@id/btn_login"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="40dp"/>
