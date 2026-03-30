@@ -1,6 +1,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/neutral"
@@ -22,28 +23,28 @@
         android:id="@+id/tv_welcome_scholar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="WELCOME BACK SCHOLAR"
+        android:layout_marginTop="40dp"
+        android:letterSpacing="0.1"
+        android:text="WELCOME BACK "
         android:textColor="@color/tertiary"
         android:textSize="12sp"
-        android:letterSpacing="0.1"
-        app:layout_constraintTop_toBottomOf="@id/tv_brand"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="40dp"/>
+        app:layout_constraintTop_toBottomOf="@id/tv_brand" />
 
     <TextView
         android:id="@+id/tv_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Master Python at\nHigh Velocity."
+        android:text="Master Python at\nThe Easy Way"
         android:textColor="@color/white"
         android:textSize="32sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/tv_welcome_scholar"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/tv_welcome_scholar" />
 
     <EditText
-        android:id="@+id/et_email"
+        android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@drawable/input_field_rounded"
@@ -55,7 +56,7 @@
         android:layout_marginTop="48dp" />
 
     <EditText
-        android:id="@+id/et_password"
+        android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@drawable/input_field_rounded"
@@ -64,22 +65,37 @@
         android:textColorHint="#64748B"
         android:textColor="@color/white"
         android:paddingHorizontal="16dp"
-        app:layout_constraintTop_toBottomOf="@id/et_email"
+        app:layout_constraintTop_toBottomOf="@id/email"
         android:layout_marginTop="16dp" />
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:elevation="4dp"
+        app:indeterminateTint="@color/secondary"
+        app:layout_constraintBottom_toBottomOf="@id/btn_register"
+        app:layout_constraintEnd_toEndOf="@id/btn_register"
+        app:layout_constraintStart_toStartOf="@id/btn_register"
+        app:layout_constraintTop_toTopOf="@id/btn_register" />
+
+
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_login"
+        android:id="@+id/btn_register"
         android:layout_width="match_parent"
         android:layout_height="60dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/input_field_rounded"
         android:backgroundTint="@color/secondary"
-        android:text="Log In ⚡"
+        android:text="Log In"
         android:textAllCaps="false"
         android:textColor="@color/neutral"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/et_password"
-        android:layout_marginTop="24dp" />
+        app:layout_constraintTop_toBottomOf="@id/password"
+        tools:layout_editor_absoluteX="24dp" />
 
     <TextView
         android:id="@+id/tv_social_label"
@@ -88,7 +104,7 @@
         android:text="SOCIAL AUTH"
         android:textColor="#475569"
         android:textSize="10sp"
-        app:layout_constraintTop_toBottomOf="@id/btn_login"
+        app:layout_constraintTop_toBottomOf="@id/btn_register"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="40dp"/>
